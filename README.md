@@ -1,6 +1,6 @@
 # project1_wonders_of_wizarding_world
 
-Planning to create a HP search using the Potter DB API (https://potterdb.com/)
+Planning to create a HP search using the HP-API (https://hp-api.onrender.com/) to get Characters and Potter DB API (https://potterdb.com/) to get spells and potions. 
 This will have a search feature to look up information on characters, spells, and potions. 
 
 Information to be included:
@@ -11,13 +11,13 @@ Characters ->
 - picutre
 - Alias
 - Born
-- Died (if true)
+- species
+- Wizard (yes/no)
 - patronus
-- if they are a animagus
-- boggart
-- wand information
-- list of jobs
-- a wiki link for even more info
+- ancestry
+- wand information (wood, core, length)
+
+
 
 Spells ->
 - name
@@ -46,7 +46,7 @@ Pseudo code
 
 - plan on using CSS grid to get the layout
 - button to get info (have button light up when hover and flash when activated)
-- search bar
+- search bar for characters (by name) and search bar for spells/potions
 - will need to get img of houses, wand, and potion flask, to be pulled/placed based on the data searched
 - maybe add some search filters to get by house, type of spell, or difficult of potion?
 - figure out an auto complete function for search?
