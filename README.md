@@ -1,6 +1,6 @@
 # project1_wonders_of_wizarding_world
 
-Planning to create a HP search using the HP-API (https://hp-api.onrender.com/) to get Characters and Potter DB API (https://potterdb.com/) to get spells and potions. 
+Planning to create a HP search using the HP-API (https://potterhead-api.vercel.app/api/characters) to get Characters and Potter DB API (https://potterdb.com/) to get spells and potions. 
 This will have a search feature to look up information on characters, spells, and potions. 
 
 Information to be included:
