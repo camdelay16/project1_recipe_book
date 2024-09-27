@@ -1,1 +1,1 @@
-# project1_recipe_book
+# project1_wonders_of_wizarding_world
