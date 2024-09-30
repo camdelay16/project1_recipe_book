@@ -1,16 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wizz Kid</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer src="script.js"></script>
 </head>
+
 <body>
-    <h1>Wizarding World</h1>
-    <input type="text" placeholder="Search Wizard, House, Spells" id="search-bar">
-    <button id="search-btn">Accio Information</button>
+    <header>
+        <h1 id="title">Wizarding World</h1>
+        <input type="text" placeholder="Search Wizard" id="search-bar-wizard">
+        <button id="search-btn-wizard">Accio Information</button>
+        <input type="text" placeholder="Search Spells or Potions" id="search-bar-spells-potions">
+        <button id="search-btn-spell-potion">Accio Information</button>
+    </header>
+
+    <div id="wizard-info">
+        <div id="wizard-img-box">
+            <img id="wizard-img">
+        </div>
+        <div id="wizard-name-house">
+            <h3 id="wizard-name"></h3>
+            <img id="wizard-house" />
+        </div>
+        <div id="wizard-attributes">
+            <ul id="wizard-attribute-list">
+                <li id="alias"></li>
+                <li id="born"></li>
+                <li id="bloodline"></li>
+                <li id="ancestry"></li>
+                <li id="species"></li>
+                <li id="patronus"></li>
+                <li class="wand-info">
+                    <ul class="wand-info">
+                        <li id="wand-wood"></li>
+                        <li id="wand-core"></li>
+                        <li id="wand-length"></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="sp-info">
+        <div id="sp-img-box">
+            <img id="sp-img">
+        </div>
+        <div id="sp-name-img">
+            <h3 id="sp-name"></h3>
+            <img id="sp-logo" />
+        </div>
+        <div id="spell-attributes">
+            <ul id="spell-attribute-list">
+                <li id="category"></li>
+                <li id="spell-effect"></li>
+                <li id="hand-motion"></li>
+                <li id="incantation"></li>
+                <li id="light"></li>
+                <li id="wiki-spell"></li>
+            </ul>
+        </div>
+
+        <div id="potion-attributes">
+            <ul id="potion-attribute-list">
+                <li id="difficulty"></li>
+                <li id="potion-effect"></li>
+                <li id="ingredients"></li>
+                <li id="side-effects"></li>
+                <li id="wiki-potion"></li>
+            </ul>
+        </div>
+    </div>
+
 </body>
+
 </html>
