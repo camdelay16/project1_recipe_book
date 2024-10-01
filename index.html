@@ -15,8 +15,9 @@
         <h1 id="title">Wizarding World</h1>
         <input type="text" placeholder="Search Wizard" id="search-bar-wizard">
         <button id="search-btn-wizard">Accio Information</button>
-        <input type="text" placeholder="Search Spells or Potions" id="search-bar-spells-potions">
-        <button id="search-btn-spell-potion">Accio Information</button>
+        <input type="text" placeholder="Search Spells or Potions" id="search-bar-spell-potion">
+        <button id="search-btn-spell">Accio Spell</button>
+        <button id="search-btn-potion">Accio Potion</button>
     </header>
 
     <div id="wizard-info">
@@ -25,13 +26,14 @@
         </div>
         <div id="wizard-name-house">
             <h3 id="wizard-name"></h3>
-            <img id="wizard-house" />
+            <img id="wizard-house-img" />
+            <h5 id="wizard-house"></h5>
         </div>
         <div id="wizard-attributes">
             <ul id="wizard-attribute-list">
                 <li id="alias"></li>
                 <li id="born"></li>
-                <li id="bloodline"></li>
+                <li id="wiz-or-mug"></li>
                 <li id="ancestry"></li>
                 <li id="species"></li>
                 <li id="patronus"></li>
@@ -56,17 +58,19 @@
         </div>
         <div id="spell-attributes">
             <ul id="spell-attribute-list">
-                <li id="category"></li>
+                <li id="spell-category"></li>
                 <li id="spell-effect"></li>
                 <li id="hand-motion"></li>
                 <li id="incantation"></li>
                 <li id="light"></li>
                 <li id="wiki-spell"></li>
+
             </ul>
         </div>
 
         <div id="potion-attributes">
             <ul id="potion-attribute-list">
+                <li id="characteristics"></li>
                 <li id="difficulty"></li>
                 <li id="potion-effect"></li>
                 <li id="ingredients"></li>
