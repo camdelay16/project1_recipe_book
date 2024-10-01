@@ -26,7 +26,7 @@ wizButton.addEventListener(`click`, async () => {
     let wizardHouse = response.data.house
     wizHouse.textContent = `${wizardHouse}`
 
-    // if (wizardHouse == `Gryffindor`) {wizHouseImg.settAttribute('src', )} else if (wizardHouse == `Slytherin`) {wizHouseImg.settAttribute('src', )} else if (wizardHouse == `Ravenclaw`) {wizHouseImg.settAttribute('src', )} else if (wizardHouse == `Huffelpuff`) {wizHouseImg.settAttribute('src', )} else {'None'}
+    // if (wizardHouse == `Gryffindor`) {wizHouseImg.setAttribute('src', )} else if (wizardHouse == `Slytherin`) {wizHouseImg.setAttribute('src', )} else if (wizardHouse == `Ravenclaw`) {wizHouseImg.setAttribute('src', )} else if (wizardHouse == `Huffelpuff`) {wizHouseImg.setAttribute('src', )} else {'None'}
 
     let wizardAlias = response.data.alternate_names[0]
     wizAlias.textContent = `Alias: ${wizardAlias}`
@@ -34,8 +34,10 @@ wizButton.addEventListener(`click`, async () => {
     let wizardBorn = response.data.dateOfBirth
     wizBorn.textContent = `DOB: ${wizardBorn}`
 
-    // if (response.data.wizard == 'true') {let wizardOrMug = `Wizard`} else {let wizardOrMug =`Muggle`}
-    // wizOrMug.textContent = `Is a ${wizardOrMug}`
+    let wizardOrMug;
+    if (response.data.wizard == 'true') {let wizardOrMug = `Wizard`} 
+    else {let wizardOrMug =`Muggle`}
+    wizOrMug.textContent = `Is a ${wizardOrMug}`
 
     let wizardAncestry = response.data.ancestry
     wizAncestry.textContent = `Ancestry: ${wizardAncestry}`
@@ -50,10 +52,10 @@ wizButton.addEventListener(`click`, async () => {
     wandWood.textContent = `Wood: ${wizWandWood}`
 
     let wizWandCore = response.data.wand.core
-    wandCore.textContent = `Wood: ${wizWandCore}`
+    wandCore.textContent = `Core: ${wizWandCore}`
 
     let wizWandLength = response.data.wand.length
-    wandLength.textContent = `Wood: ${wizWandLength}`
+    wandLength.textContent = `Length: ${wizWandLength}`
 
 })
 
@@ -91,7 +93,7 @@ spellButton.addEventListener(`click`, async () => {
     sCategory.textContent = `${spellCategory}`
 
     let spellEffect = responseSpell.data.data.attributes.effect
-    sCategory.textContent = `${spellEffect}`
+    sEffect.textContent = `${spellEffect}`
 
     let spellHandMotion = responseSpell.data.data.attributes.hand
     sHandMotion.textContent = `${spellHandMotion}`
