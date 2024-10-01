@@ -26,7 +26,10 @@ wizButton.addEventListener(`click`, async () => {
     let wizardHouse = response.data.house
     wizHouse.textContent = `${wizardHouse}`
 
-    // if (wizardHouse == `Gryffindor`) {wizHouseImg.setAttribute('src', )} else if (wizardHouse == `Slytherin`) {wizHouseImg.setAttribute('src', )} else if (wizardHouse == `Ravenclaw`) {wizHouseImg.setAttribute('src', )} else if (wizardHouse == `Huffelpuff`) {wizHouseImg.setAttribute('src', )} else {'None'}
+    let wizardImg = response.data.image
+    wizImg.setAttribute('src', wizardImg)
+
+    if (wizardHouse == `Gryffindor`) {wizHouseImg.setAttribute('src', `https://1000logos.net/wp-content/uploads/2021/11/Gryffindor-Logo-768x432.png`)} else if (wizardHouse == `Slytherin`) {wizHouseImg.setAttribute('src', `https://1000logos.net/wp-content/uploads/2023/05/Slytherin-Logo-768x432.png`)} else if (wizardHouse == `Ravenclaw`) {wizHouseImg.setAttribute('src', `https://logos-world.net/wp-content/uploads/2022/11/Ravenclaw-Symbol-500x281.png`)} else if (wizardHouse == `Hufflepuff`) {wizHouseImg.setAttribute('src', `https://www.seekpng.com/png/full/146-1467974_hufflepuff-house.png`)} else {'None'}
 
     let wizardAlias = response.data.alternate_names[0]
     wizAlias.textContent = `Alias: ${wizardAlias}`
@@ -34,10 +37,11 @@ wizButton.addEventListener(`click`, async () => {
     let wizardBorn = response.data.dateOfBirth
     wizBorn.textContent = `DOB: ${wizardBorn}`
 
-    let wizardOrMug;
-    if (response.data.wizard == 'true') {let wizardOrMug = `Wizard`} 
-    else {let wizardOrMug =`Muggle`}
-    wizOrMug.textContent = `Is a ${wizardOrMug}`
+    let wizardOrMug = response.data.wizard;
+    let wizardOrMugText;
+    if (wizardOrMug === true) {wizardOrMugText = `Wizard`} 
+    else {wizardOrMugText =`Muggle`};
+    wizOrMug.textContent = `Is a ${wizardOrMugText}`;
 
     let wizardAncestry = response.data.ancestry
     wizAncestry.textContent = `Ancestry: ${wizardAncestry}`
