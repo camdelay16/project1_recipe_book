@@ -16,11 +16,10 @@
         <input type="text" placeholder="Search Wizard" id="search-bar-wizard">
         <button id="search-btn-wizard">Accio Information</button>
         <input type="text" placeholder="Search Spells or Potions" id="search-bar-spell-potion">
-        <button id="search-btn-spell">Accio Spell</button>
-        <button id="search-btn-potion">Accio Potion</button>
+        <button id="search-btn-spell-potion">Accio Spell or Potion</button>        
     </header>
 
-    <div id="wizard-info">
+    <div id="wizard-info" style="display: none">
         <div id="wizard-img-box">
             <img id="wizard-img">
         </div>
@@ -48,7 +47,7 @@
         </div>
     </div>
 
-    <div id="sp-info">
+    <div id="sp-info" style="display: none">
         <div id="sp-img-box">
             <img id="sp-img">
         </div>
@@ -56,7 +55,7 @@
             <h3 id="sp-name"></h3>
             <img id="sp-logo" />
         </div>
-        <div id="spell-attributes">
+        <div id="spell-attributes" style="display: none">
             <ul id="spell-attribute-list">
                 <li id="spell-category"></li>
                 <li id="spell-effect"></li>
@@ -68,7 +67,7 @@
             </ul>
         </div>
 
-        <div id="potion-attributes">
+        <div id="potion-attributes" style="display: none">
             <ul id="potion-attribute-list">
                 <li id="characteristics"></li>
                 <li id="difficulty"></li>
