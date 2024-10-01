@@ -15,13 +15,25 @@ const wandCore = document.querySelector(`#wand-core`)
 const wandLength = document.querySelector(`#wand-length`)
 const wizInfo = document.querySelector(`#wizard-info`)
 
+function clearSearch(){
+    textInputWiz.value = "";
+    textInputSP.value = "";
+}
+
 wizButton.addEventListener(`click`, async () => {
-    let searchText = textInputWiz.value
+    await searchWizard()
+})
+    textInputWiz.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter'){searchWizard()}
+    })
+
+    async function searchWizard() {let searchText = textInputWiz.value
     console.log(searchText)
     let response = await axios.get(`https://cors-anywhere.herokuapp.com/https://potterhead-api.vercel.app/api/characters/${searchText}`) //needed to run off a proxxy server? the thunderclient seemed to work just fine so not sure why. Used chat GPT to diagnose.
     console.log(response)
 
     wizInfo.style.display = `block`
+    spInfo.style.display = `none`
 
     let wizardName = response.data.name
     wizName.textContent = `${wizardName}`
@@ -64,7 +76,9 @@ wizButton.addEventListener(`click`, async () => {
     let wizWandLength = response.data.wand.length
     wandLength.textContent = `Length: ${wizWandLength}`
 
-})
+    clearSearch()
+
+}
 
 
 const spButton = document.querySelector(`#search-btn-spell-potion`)
@@ -89,14 +103,27 @@ const sAttributes = document.querySelector(`#spell-attributes`)
 const pAttributes = document.querySelector(`#potion-attributes`)
 
 spButton.addEventListener(`click`, async () => {
-    let searchText = textInputSP.value
+    await searchSpellPotion()
+})
+
+textInputSP.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter'){searchSpellPotion()}
+})
+        
+    async function searchSpellPotion() {
+        let searchTextInput = textInputSP.value
+    console.log(searchTextInput)
+
+    let searchText = searchTextInput.replace(' ', '-')
     console.log(searchText)
+
     try {let responseSpell = await axios.get(`https://api.potterdb.com/v1/spells/${searchText}/`)
     console.log(responseSpell)
 
     spInfo.style.display = `block`
     sAttributes.style.display = `block`
     pAttributes.style.display = `None`
+    wizInfo.style.display = `None`
 
     spImgLogo.setAttribute('src',`https://pngimg.com/uploads/wand/wand_PNG25.png`)
 
@@ -123,6 +150,10 @@ spButton.addEventListener(`click`, async () => {
 
     let spellWiki = responseSpell.data.data.attributes.wiki
     sWiki.textContent = `${spellWiki}`
+
+    clearSearch()
+
+    return;
 }
     catch (err) {
         console.log(`trying potions next`)
@@ -134,6 +165,7 @@ spButton.addEventListener(`click`, async () => {
     spInfo.style.display = `block`
     pAttributes.style.display = `block`
     sAttributes.style.display = `none`
+    wizInfo.style.display = `none`
 
     let potionImg = responsePotion.data.data.attributes.image
     spImg.setAttribute(`src`, potionImg)
@@ -160,7 +192,11 @@ spButton.addEventListener(`click`, async () => {
 
     let potionWiki = responsePotion.data.data.attributes.wiki
     pWiki.textContent = `${potionWiki}`
+
+    clearSearch()
+
+    return;
 }
 catch (err) {console.error(`potion not found`)}
 
-})
+}
