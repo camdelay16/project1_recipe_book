@@ -42,7 +42,7 @@ async function searchWizard() {
     wizName.textContent = `${wizardName}`
 
     let wizardHouse = response.data.house
-    wizHouse.textContent = `${wizardHouse}`
+    wizHouse.textContent = `House: ${wizardHouse}`
 
     let wizardImg = response.data.image
     wizImg.setAttribute('src', wizardImg)
@@ -77,7 +77,7 @@ async function searchWizard() {
     wandCore.textContent = `Core: ${wizWandCore}`
 
     let wizWandLength = response.data.wand.length
-    wandLength.textContent = `Length: ${wizWandLength}`
+    wandLength.textContent = `Length: ${wizWandLength} in.`
 
     clearSearch()
 
@@ -129,7 +129,7 @@ async function searchSpellPotion() {
         console.log(responseSpell)
 
         spInfo.style.display = `grid`
-        sAttributes.style.display = `block`
+        sAttributes.style.display = `grid`
         pAttributes.style.display = `None`
         wizInfo.style.display = `None`
 
@@ -142,22 +142,28 @@ async function searchSpellPotion() {
         spName.textContent = `${spellName}`
 
         let spellCategory = responseSpell.data.data.attributes.category
-        sCategory.textContent = `${spellCategory}`
+        sCategory.textContent = `Category: ${spellCategory}`
 
         let spellEffect = responseSpell.data.data.attributes.effect
-        sEffect.textContent = `${spellEffect}`
+        sEffect.textContent = `Effect: ${spellEffect}`
 
         let spellHandMotion = responseSpell.data.data.attributes.hand
-        sHandMotion.textContent = `${spellHandMotion}`
+        sHandMotion.textContent = `Hand Motion: ${spellHandMotion}`
 
         let spellIncantation = responseSpell.data.data.attributes.incantation
-        sIncantation.textContent = `${spellIncantation}`
+        sIncantation.textContent = `Incantation: ${spellIncantation}`
 
         let spellLight = responseSpell.data.data.attributes.light
-        sLight.textContent = `${spellLight}`
+        sLight.textContent = `Light Color: ${spellLight}`
 
         let spellWiki = responseSpell.data.data.attributes.wiki
-        sWiki.textContent = `${spellWiki}`
+        let wikiLink = document.createElement('a')
+        wikiLink.href = spellWiki
+        wikiLink.textContent = `More info on Wikipedia`
+        wikiLink.target = `_blank`
+
+        sWiki.innerHTML = ''
+        sWiki.appendChild(wikiLink)
 
         clearSearch()
 
@@ -171,8 +177,8 @@ async function searchSpellPotion() {
         let responsePotion = await axios.get(`https://api.potterdb.com/v1/potions/${searchText}/`)
         console.log(responsePotion)
 
-        spInfo.style.display = `block`
-        pAttributes.style.display = `block`
+        spInfo.style.display = `grid`
+        pAttributes.style.display = `grid`
         sAttributes.style.display = `none`
         wizInfo.style.display = `none`
 
@@ -185,22 +191,28 @@ async function searchSpellPotion() {
         spName.textContent = `${potionName}`
 
         let potionChar = responsePotion.data.data.attributes.characteristics
-        pCharacteristics.textContent = `${potionChar}`
+        pCharacteristics.textContent = `Characteristics: ${potionChar}`
 
         let potionDifficulty = responsePotion.data.data.attributes.difficulty
-        pDifficulty.textContent = `${potionDifficulty}`
+        pDifficulty.textContent = `Difficulty: ${potionDifficulty}`
 
         let potionEffect = responsePotion.data.data.attributes.effect
-        pEffect.textContent = `${potionEffect}`
+        pEffect.textContent = `Effect: ${potionEffect}`
 
         let potionIngredients = responsePotion.data.data.attributes.ingredients
-        pIngredients.textContent = `${potionIngredients}`
+        pIngredients.textContent = `Ingredients: ${potionIngredients}`
 
         let potionSideEffects = responsePotion.data.data.attributes.side_effects
-        pSideEffects.textContent = `${potionSideEffects}`
+        pSideEffects.textContent = `Side Effects: ${potionSideEffects}`
 
         let potionWiki = responsePotion.data.data.attributes.wiki
-        pWiki.textContent = `${potionWiki}`
+        let wikiLink = document.createElement('a')
+        wikiLink.href = potionWiki
+        wikiLink.textContent = `More info on Wikipedia`
+        wikiLink.target = `_blank`
+
+        pWiki.innerHTML = ''
+        pWiki.appendChild(wikiLink)
 
         clearSearch()
 
