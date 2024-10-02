@@ -47,7 +47,7 @@ async function searchWizard() {
     let wizardImg = response.data.image
     wizImg.setAttribute('src', wizardImg)
 
-    if (wizardHouse == `Gryffindor`) { wizHouseImg.setAttribute('src', `https://1000logos.net/wp-content/uploads/2021/11/Gryffindor-Logo-768x432.png`) } else if (wizardHouse == `Slytherin`) { wizHouseImg.setAttribute('src', `https://1000logos.net/wp-content/uploads/2023/05/Slytherin-Logo-768x432.png`) } else if (wizardHouse == `Ravenclaw`) { wizHouseImg.setAttribute('src', `https://logos-world.net/wp-content/uploads/2022/11/Ravenclaw-Symbol-500x281.png`) } else if (wizardHouse == `Hufflepuff`) { wizHouseImg.setAttribute('src', `https://www.seekpng.com/png/full/146-1467974_hufflepuff-house.png`) } else { 'None' }
+    if (wizardHouse == `Gryffindor`) { wizHouseImg.setAttribute('src', `https://1000logos.net/wp-content/uploads/2021/11/Gryffindor-Logo-768x432.png`) } else if (wizardHouse == `Slytherin`) { wizHouseImg.setAttribute('src', `https://1000logos.net/wp-content/uploads/2023/05/Slytherin-Logo-768x432.png`) } else if (wizardHouse == `Ravenclaw`) { wizHouseImg.setAttribute('src', `https://logos-world.net/wp-content/uploads/2022/11/Ravenclaw-Symbol-500x281.png`) } else if (wizardHouse == `Hufflepuff`) { wizHouseImg.setAttribute('src', `https://www.seekpng.com/png/full/146-1467974_hufflepuff-house.png`) } else { 'null' }
 
     let wizardAlias = response.data.alternate_names[0]
     wizAlias.textContent = `Alias: ${wizardAlias}`
@@ -209,3 +209,23 @@ async function searchSpellPotion() {
     catch (err) { console.error(`potion not found`) }
 
 }
+
+//used https://www.winterwind.com/tutorials/css/60 to get JS code below and the CSS
+window.addEventListener(`mousemove`, function (e) {
+    let arr = [1, 0.9, 0.8, 0.5, 0.2]
+
+    arr.forEach(function(i){
+        let x = (1 - i) * 75;
+        let star = document.createElement('div');
+
+        star.className = 'star';
+        star.style.top = e.pageY + Math.round(Math.random() * x - x / 2) + 'px';
+        star.style.left = e.pageX + Math.round(Math.random() * x - x / 2) + 'px';
+
+        document.body.appendChild(star);
+
+        window.setTimeout(function() {
+            document.body.removeChild(star);
+        }, Math.round(Math.random() * i * 600));
+    });
+}, false);
