@@ -35,7 +35,7 @@ async function searchWizard() {
     let response = await axios.get(`${url}${searchText}`) 
     console.log(response)
 
-    wizInfo.style.display = `block`
+    wizInfo.style.display = `grid`
     spInfo.style.display = `none`
 
     let wizardName = response.data.name
@@ -128,7 +128,7 @@ async function searchSpellPotion() {
         let responseSpell = await axios.get(`https://api.potterdb.com/v1/spells/${searchText}/`)
         console.log(responseSpell)
 
-        spInfo.style.display = `block`
+        spInfo.style.display = `grid`
         sAttributes.style.display = `block`
         pAttributes.style.display = `None`
         wizInfo.style.display = `None`
