@@ -33,7 +33,6 @@
 
     #title {
         font-family: "Risque", serif;
-        font-weight: 400;
         font-style: normal;
         font-size: 45px;
         color: goldenrod;
@@ -93,7 +92,6 @@
         min-width: 120px;
         padding: 5px;
         font-family: "Smythe", system-ui;
-        font-weight: 400;
         font-style: normal;
         letter-spacing: .05rem;
     }
@@ -315,11 +313,10 @@
         grid-template-columns: 1fr;
         gap: 10px;
         justify-items: center;
-
     }
+
     #title {
         font-family: "Risque", serif;
-        font-weight: 400;
         font-style: normal;
         font-size: 45px;
         color: goldenrod;
@@ -404,7 +401,6 @@
         font-size: 50px;
         text-decoration: underline;
         letter-spacing: .2rem;
-
     }
 
     #wizard-house {
@@ -421,7 +417,6 @@
     #wizard-house-img {
         max-width: 200px;
         max-height: 200px;
-
     }
 
     #wizard-attributes {
@@ -443,7 +438,6 @@
         gap: 10px;
     }
 
-
     #sp-info {
         background-color: rgba(128, 128, 128, 0.821);
         border-radius: 14px;
@@ -458,8 +452,6 @@
     #sp-img-box {
         margin: 10px;
     }
-
-    #sp-name-img {}
 
     #sp-logo-div {
         display: grid;
@@ -487,6 +479,4 @@
     ul {
         list-style-type: none;
     }
-
 }
-
