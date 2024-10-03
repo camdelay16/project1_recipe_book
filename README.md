@@ -51,7 +51,6 @@ Planning to build for desktop then for mobile.
 - want soft edges on container borders
 - have error not found screen
 - have search clear after searching
-- 
 
 
 ### Stretch goals to complete at a later time

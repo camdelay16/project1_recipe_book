@@ -20,7 +20,8 @@
         margin: 5px;
     }
 
-    #wiki-potion, #wiki-spell {
+    #wiki-potion,
+    #wiki-spell {
         text-shadow: none;
     }
 
@@ -329,7 +330,8 @@
         text-shadow: 1px 1px 2px rgb(0, 0, 0);
     }
 
-    #wiki-potion, #wiki-spell {
+    #wiki-potion,
+    #wiki-spell {
         text-shadow: none;
     }
 
