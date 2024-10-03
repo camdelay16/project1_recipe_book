@@ -94,6 +94,7 @@ button{
 .information {
     grid-column: 1/4;
     grid-row-start: 2;
+    min-width: 500px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -120,11 +121,11 @@ button{
 #wizard-name-title {
     grid-column: 2/3;
     grid-row: 1/2;
-    text-align: center;
     display: grid;
-    justify-items: center;
-    align-items: center;
+    justify-items: start;
+    align-items: end;
     margin-bottom: 20px;
+    margin-left: 20px;
 }
 
 #wizard-name {
