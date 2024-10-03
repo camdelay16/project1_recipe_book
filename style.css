@@ -104,6 +104,22 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    #not-found {
+        margin: 20px;
+        grid-column: 1/3;
+        gap: 20px;
+        background-color: rgba(128, 128, 128, 0.821);
+        border-radius: 14px;
+        justify-items: center;
+        align-items: center;
+        font-size: 50px;
+    }
+
+    #not-found-img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
     #wizard-info {
         background-color: rgba(128, 128, 128, 0.821);
         border-radius: 14px;

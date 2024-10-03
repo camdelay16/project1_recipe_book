@@ -100,6 +100,8 @@ async function searchWizard() {
     notFound.style.display = `grid`
 
     notFoundImg.setAttribute('src', `https://www.wizardingworld.com/assets/_next/static/images/sorting-hat-768-c1739973b4e53269f48e0e4390a48a05.png`)
+
+    clearSearch()
 }
 
 }
@@ -242,6 +244,8 @@ async function searchSpellPotion() {
         notFound.style.display = `grid`
     
         notFoundImg.setAttribute('src', `https://www.wizardingworld.com/assets/_next/static/images/sorting-hat-768-c1739973b4e53269f48e0e4390a48a05.png`)
+
+        clearSearch()
     }
 
 }
