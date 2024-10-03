@@ -137,7 +137,7 @@ textInputSP.addEventListener('keydown', (event) => {
 })
 
 async function searchSpellPotion() {
-    let searchTextInput = textInputSP.value
+    let searchTextInput = textInputSP.value.toLowerCase()
     console.log(searchTextInput)
 
     let searchText = searchTextInput.replace(' ', '-')
