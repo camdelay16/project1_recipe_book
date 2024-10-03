@@ -50,10 +50,10 @@ async function searchWizard() {
     if (wizardHouse == `Gryffindor`) { wizHouseImg.setAttribute('src', `https://1000logos.net/wp-content/uploads/2021/11/Gryffindor-Logo-768x432.png`) } else if (wizardHouse == `Slytherin`) { wizHouseImg.setAttribute('src', `https://1000logos.net/wp-content/uploads/2023/05/Slytherin-Logo-768x432.png`) } else if (wizardHouse == `Ravenclaw`) { wizHouseImg.setAttribute('src', `https://logos-world.net/wp-content/uploads/2022/11/Ravenclaw-Symbol-500x281.png`) } else if (wizardHouse == `Hufflepuff`) { wizHouseImg.setAttribute('src', `https://www.seekpng.com/png/full/146-1467974_hufflepuff-house.png`) } else { 'null' }
 
     let wizardAlias = response.data.alternate_names[0]
-    wizAlias.textContent = `Alias: ${wizardAlias}`
+    wizAlias.textContent = `Alias: ${wizardAlias || `None`}`
 
     let wizardBorn = response.data.dateOfBirth
-    wizBorn.textContent = `DOB: ${wizardBorn}`
+    wizBorn.textContent = `DOB: ${wizardBorn || `Unknown`}`
 
     let wizardOrMug = response.data.wizard;
     let wizardOrMugText;
@@ -62,22 +62,22 @@ async function searchWizard() {
     wizOrMug.textContent = `Is a ${wizardOrMugText}`;
 
     let wizardAncestry = response.data.ancestry
-    wizAncestry.textContent = `Ancestry: ${wizardAncestry}`
+    wizAncestry.textContent = `Ancestry: ${wizardAncestry || `Unknown`}`
 
     let wizardSpecies = response.data.species
-    wizSpecies.textContent = `Species: ${wizardSpecies}`
+    wizSpecies.textContent = `Species: ${wizardSpecies || `Unknown`}`
 
     let wizardPatronus = response.data.patronus
-    wizPatronus.textContent = `Patronus: ${wizardPatronus}`
+    wizPatronus.textContent = `Patronus: ${wizardPatronus|| `Unknown`}`
 
     let wizWandWood = response.data.wand.wood
-    wandWood.textContent = `Wood: ${wizWandWood}`
+    wandWood.textContent = `Wood: ${wizWandWood || `Unknown`}`
 
     let wizWandCore = response.data.wand.core
-    wandCore.textContent = `Core: ${wizWandCore}`
+    wandCore.textContent = `Core: ${wizWandCore || `Unknown`}`
 
     let wizWandLength = response.data.wand.length
-    wandLength.textContent = `Length: ${wizWandLength} in.`
+    wandLength.textContent = `Length: ${wizWandLength || `Unknown`} in.`
 
     clearSearch()
 
@@ -142,19 +142,19 @@ async function searchSpellPotion() {
         spName.textContent = `${spellName}`
 
         let spellCategory = responseSpell.data.data.attributes.category
-        sCategory.textContent = `Category: ${spellCategory}`
+        sCategory.textContent = `Category: ${spellCategory || `Unknown`}`
 
         let spellEffect = responseSpell.data.data.attributes.effect
-        sEffect.textContent = `Effect: ${spellEffect}`
+        sEffect.textContent = `Effect: ${spellEffect || `Unknown`}`
 
         let spellHandMotion = responseSpell.data.data.attributes.hand
-        sHandMotion.textContent = `Hand Motion: ${spellHandMotion}`
+        sHandMotion.textContent = `Hand Motion: ${spellHandMotion || `Unknown`}`
 
         let spellIncantation = responseSpell.data.data.attributes.incantation
-        sIncantation.textContent = `Incantation: ${spellIncantation}`
+        sIncantation.textContent = `Incantation: ${spellIncantation || `Unknown`}`
 
         let spellLight = responseSpell.data.data.attributes.light
-        sLight.textContent = `Light Color: ${spellLight}`
+        sLight.textContent = `Light Color: ${spellLight || `Unknown`}`
 
         let spellWiki = responseSpell.data.data.attributes.wiki
         let wikiLink = document.createElement('a')
@@ -191,19 +191,19 @@ async function searchSpellPotion() {
         spName.textContent = `${potionName}`
 
         let potionChar = responsePotion.data.data.attributes.characteristics
-        pCharacteristics.textContent = `Characteristics: ${potionChar}`
+        pCharacteristics.textContent = `Characteristics: ${potionChar || `Unknown`}`
 
         let potionDifficulty = responsePotion.data.data.attributes.difficulty
-        pDifficulty.textContent = `Difficulty: ${potionDifficulty}`
+        pDifficulty.textContent = `Difficulty: ${potionDifficulty || `Unknown`}`
 
         let potionEffect = responsePotion.data.data.attributes.effect
-        pEffect.textContent = `Effect: ${potionEffect}`
+        pEffect.textContent = `Effect: ${potionEffect || `Unknown`}`
 
         let potionIngredients = responsePotion.data.data.attributes.ingredients
-        pIngredients.textContent = `Ingredients: ${potionIngredients}`
+        pIngredients.textContent = `Ingredients: ${potionIngredients || `Unknown`}`
 
         let potionSideEffects = responsePotion.data.data.attributes.side_effects
-        pSideEffects.textContent = `Side Effects: ${potionSideEffects}`
+        pSideEffects.textContent = `Side Effects: ${potionSideEffects || `Unknown`}`
 
         let potionWiki = responsePotion.data.data.attributes.wiki
         let wikiLink = document.createElement('a')
