@@ -1,286 +1,488 @@
-body {
-    background-image: url('https://wordsandlyricss.wordpress.com/wp-content/uploads/2015/09/harry-potter-14.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgb(0, 0, 19);
-    color: rgb(231, 196, 105);
-    font-family: "Smythe", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px, repeat(2, 1fr);
-}
+@media screen and (max-width: 450px) {
+    body {
+        background-image: url('https://w0.peakpx.com/wallpaper/284/109/HD-wallpaper-harry-potter-houses-harry-potter-hogwarts.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-attachment: fixed;
+        background-color: rgb(13, 13, 250);
+        color: rgb(231, 196, 105);
+        font-family: "Smythe", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px, 1fr;
+    }
 
-li {
-    margin: 5px;
-}
+    li {
+        margin: 5px;
+    }
 
-header {
-    grid-column: 2/3;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-}
+    header {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        justify-items: center;
 
-.title-div {
-    grid-column: 1 / 3;
-    margin-top: 20px;
-}
+    }
+    #title {
+        font-family: "Risque", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 45px;
+        color: goldenrod;
+        text-shadow: 1px 1px 2px rgb(106, 83, 26);
+        margin: 10px;
+        text-align: center;
+    }
 
-#title {
-    font-family: "Risque", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 45px;
-    color: goldenrod;
-    text-shadow: 1px 1px 2px rgb(106, 83, 26);
-    margin: 10px;
-    text-align: center;
-}
+    button {
+        border: 5px;
+        border-radius: 40px;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        min-width: 125px;
+    }
 
-button{
-    border: 5px;
-    border-radius: 40px;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-}
+    #search-btn-wizard {
+        background-color: crimson;
+        color: gold;
+    }
 
-#search-btn-wizard {
-    background-color: crimson;
-    color: gold;
-}
+    #search-btn-wizard:active {
+        background-color: darkgreen;
+        color: silver;
+        font-size: 15px;
+        text-shadow: rgb(236, 231, 212) 1px 0 10px;
+        transform: scale(1:1);
+    }
 
-#search-btn-wizard:hover {
-    background-color: darkgreen;
-    color: silver;
-    font-size: 15px;
-    text-shadow: rgb(236, 231, 212) 1px 0 10px;
-}
+    #search-btn-spell-potion {
+        background-color: rgb(237, 223, 26);
+        color: black;
+    }
 
-#search-btn-wizard:active {
-    background-color: crimson;
-    color: gold;
-}
+    #search-btn-spell-potion:active {
+        background-color: darkblue;
+        color: silver;
+        font-size: 15px;
+        text-shadow: rgb(236, 231, 212) 1px 0 10px;
+        transform: scale(1:1);
+    }
 
-#search-btn-spell-potion {
-    background-color: rgb(237, 223, 26);
-    color: black;
-}
-#search-btn-spell-potion:hover {
-    background-color: darkblue;
-    color: silver;
-    font-size: 15px;
-    text-shadow: rgb(236, 231, 212) 1px 0 10px;
-}
-#search-btn-spell-potion:active {
-    background-color: rgb(237, 223, 26);
-    color: black;
-}
+    #search-bar-spell-potion,
+    #search-bar-wizard,
+    #search-btn-wizard,
+    #search-btn-spell-potion {
+        padding: 5px;
+        font-family: "Smythe", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: .05rem;
+    }
 
-#search-bar-spell-potion,
-#search-bar-wizard,
-#search-btn-wizard,
-#search-btn-spell-potion {
-    max-height: 30px;
-    min-width: 120px;
-    padding: 5px;
-    font-family: "Smythe", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: .05rem;
-}
+    #search-bar-spell-potion,
+    #search-bar-wizard {
+        min-width: 250px;
+    }
 
-.information {
-    grid-column: 1/4;
-    grid-row-start: 2;
-    min-width: 500px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
+    #wizard-info {
+        background-color: rgba(128, 128, 128, 0.821);
+        border-radius: 14px;
+        margin: 20px;
+        padding: 20px;
+        letter-spacing: .1rem;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
 
-#wizard-info {
-    background-color: rgba(128, 128, 128, 0.821);
-    border-radius: 14px;
-    margin: 20px;
-    padding: 20px;
-    letter-spacing: .1rem;
-    grid-column: 1/3;
-    min-width: 300px;
-}
+    #wizard-img-box {
+        margin: 10px;
+    }
 
-#wizard-img-box {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    margin: 10px;
-}
+    #wizard-name-title {
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
 
-#wizard-name-title {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    display: grid;
-    justify-items: start;
-    align-items: end;
-    margin-bottom: 20px;
-    margin-left: 20px;
-}
+    #wizard-name {
+        margin: 4px;
+        text-align: center;
+        font-size: 50px;
+        text-decoration: underline;
+        letter-spacing: .2rem;
 
-#wizard-name {
-    margin: 4px;
-    grid-column: 1/2;
-    grid-row: 1/3;
-    text-align: center;
-    font-size: 50px;
-    text-decoration: underline;
-    letter-spacing: .2rem;
+    }
 
-}
+    #wizard-house {
+        margin: 4px;
+        text-align: center;
+        font-size: 30px;
+    }
 
-#wiz-house-info {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    display: grid;
-    grid-template-columns: 1fr;
-}
+    #whi {
+        display: grid;
+        justify-items: center;
+    }
 
-#wizard-house {
-    margin: 4px;
-    grid-column: 1/2;
-    grid-row: 2/3;
-    text-align: center;
-    font-size: 30px;
-}
+    #wizard-house-img {
+        max-width: 200px;
+        max-height: 200px;
 
-#whi {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    display: grid;
-    justify-items: center;
-    align-items: end;
-}
+    }
 
-#wizard-house-img {
-    max-width: 200px;
-    max-height: 200px;
-}
+    #wizard-attributes {
+        font-size: 20px;
+        text-transform: capitalize;
+    }
 
-#wizard-attributes {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    min-width: 300px;
-    display: grid;
-    align-items: center;
-    font-size: 20px;
-    text-transform: capitalize;
-}
+    #wand-info-list {
+        list-style-type: square;
+    }
 
-#wand-info-list {
-    list-style-type: square;
-}
+    #wizard-img,
+    #sp-img {
+        border-radius: 10px;
+    }
 
-#wizard-img,
-#sp-img {
-    border-radius: 10px;
-}
-
-#wizard-img {
-    max-width: 200px;
-    gap: 10px;
-}
+    #wizard-img {
+        max-width: 200px;
+        gap: 10px;
+    }
 
 
-#sp-info {
-    background-color: rgba(128, 128, 128, 0.821);
-    border-radius: 14px;
-    margin: 20px;
-    padding: 20px;
-    letter-spacing: .1rem;
-    grid-column: 1/3;
-    min-width: 300px;
-    grid-template-columns: repeat(2, 1fr);
-}
+    #sp-info {
+        background-color: rgba(128, 128, 128, 0.821);
+        border-radius: 14px;
+        margin: 20px;
+        padding: 20px;
+        letter-spacing: .1rem;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
 
-#sp-img-box {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    margin: 10px;
-    display: grid;
-    justify-items: center;
-    align-items: center;
+    #sp-img-box {
+        margin: 10px;
+    }
+
+    #sp-name-img {}
+
+    #sp-logo-div {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
+
+    #sp-logo {
+        max-width: 75px;
+        max-height: 75px;
+    }
+
+    #sp-name {
+        text-align: center;
+        font-size: 40px;
+        text-decoration: underline;
+    }
+
+    #spell-attributes,
+    #potion-attributes {
+        font-size: 20px;
+        text-transform: capitalize;
+    }
+
+    ul {
+        list-style-type: none;
+    }
 
 }
 
-#sp-name-img {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
+@media screen and (min-width: 450px) {
+    body {
+        background-image: url('https://wordsandlyricss.wordpress.com/wp-content/uploads/2015/09/harry-potter-14.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgb(0, 0, 19);
+        color: rgb(231, 196, 105);
+        font-family: "Smythe", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 200px, repeat(2, 1fr);
+    }
 
-#sp-logo-div {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    display: grid;
-    justify-items: end;
-    align-items: start;
-}
+    li {
+        margin: 5px;
+    }
 
-#sp-logo {
-    max-width: 50px;
-    max-height: 50px;
+    header {
+        grid-column: 2/3;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
 
-}
+    .title-div {
+        grid-column: 1 / 3;
+        margin-top: 20px;
+    }
 
-#sp-name {
-    grid-column: 1/3;
-    grid-row: 2/3;
-    text-align: center;
-    font-size: 40px;
-    text-decoration: underline;
-}
+    #title {
+        font-family: "Risque", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 45px;
+        color: goldenrod;
+        text-shadow: 1px 1px 2px rgb(106, 83, 26);
+        margin: 10px;
+        text-align: center;
+    }
 
-#spell-attributes,
-#potion-attributes {
-    grid-column: 1/3;
-    grid-row: 2/3;
-    justify-items: center;
-    align-items: center;
-    font-size: 20px;
-    text-transform: capitalize;
-}
+    button {
+        border: 5px;
+        border-radius: 40px;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+
+    #search-btn-wizard {
+        background-color: crimson;
+        color: gold;
+    }
+
+    #search-btn-wizard:hover {
+        background-color: darkgreen;
+        color: silver;
+        font-size: 15px;
+        text-shadow: rgb(236, 231, 212) 1px 0 10px;
+        transform: scale(1.1);
+    }
+
+    #search-btn-wizard:active {
+        background-color: crimson;
+        color: gold;
+    }
+
+    #search-btn-spell-potion {
+        background-color: rgb(237, 223, 26);
+        color: black;
+    }
+
+    #search-btn-spell-potion:hover {
+        background-color: darkblue;
+        color: silver;
+        font-size: 15px;
+        text-shadow: rgb(236, 231, 212) 1px 0 10px;
+        transform: scale(1.1);
+    }
+
+    #search-btn-spell-potion:active {
+        background-color: rgb(237, 223, 26);
+        color: black;
+    }
+
+    #search-bar-spell-potion,
+    #search-bar-wizard,
+    #search-btn-wizard,
+    #search-btn-spell-potion {
+        max-height: 30px;
+        min-width: 120px;
+        padding: 5px;
+        font-family: "Smythe", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: .05rem;
+    }
+
+    .information {
+        grid-column: 1/4;
+        grid-row-start: 2;
+        min-width: 500px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #wizard-info {
+        background-color: rgba(128, 128, 128, 0.821);
+        border-radius: 14px;
+        margin: 20px;
+        padding: 20px;
+        letter-spacing: .1rem;
+        grid-column: 1/3;
+        min-width: 300px;
+    }
+
+    #wizard-img-box {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        margin: 10px;
+    }
+
+    #wizard-name-title {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        display: grid;
+        justify-items: start;
+        align-items: end;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+    #wizard-name {
+        margin: 4px;
+        grid-column: 1/2;
+        grid-row: 1/3;
+        text-align: center;
+        font-size: 50px;
+        text-decoration: underline;
+        letter-spacing: .2rem;
+
+    }
+
+    #wiz-house-info {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #wizard-house {
+        margin: 4px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    #whi {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: grid;
+        justify-items: center;
+        align-items: end;
+    }
+
+    #wizard-house-img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    #wizard-attributes {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        min-width: 300px;
+        display: grid;
+        align-items: center;
+        font-size: 20px;
+        text-transform: capitalize;
+    }
+
+    #wand-info-list {
+        list-style-type: square;
+    }
+
+    #wizard-img,
+    #sp-img {
+        border-radius: 10px;
+    }
+
+    #wizard-img {
+        max-width: 200px;
+        gap: 10px;
+    }
 
 
-ul {
-    list-style-type: none;
-}
+    #sp-info {
+        background-color: rgba(128, 128, 128, 0.821);
+        border-radius: 14px;
+        margin: 20px;
+        padding: 20px;
+        letter-spacing: .1rem;
+        grid-column: 1/3;
+        min-width: 300px;
+        grid-template-columns: repeat(2, 1fr);
+    }
 
+    #sp-img-box {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin: 10px;
+        display: grid;
+        justify-items: center;
+        align-items: center;
 
+    }
 
+    #sp-name-img {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-.star {
-    position: fixed;
-    pointer-events: none;
-}
+    #sp-logo-div {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        display: grid;
+        justify-items: end;
+        align-items: start;
+    }
 
-.star:before,
-star:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: '\2726';
-    font-size: 9px;
-}
+    #sp-logo {
+        max-width: 50px;
+        max-height: 50px;
 
-.star:before {
-    color: transparent;
-    text-shadow: 0 0 3px rgb(250, 250, 199);
-}
+    }
 
-.star:after {
-    background: yellow;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    #sp-name {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        text-align: center;
+        font-size: 40px;
+        text-decoration: underline;
+    }
+
+    #spell-attributes,
+    #potion-attributes {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        justify-items: center;
+        align-items: center;
+        font-size: 20px;
+        text-transform: capitalize;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .star {
+        position: fixed;
+        pointer-events: none;
+    }
+
+    .star:before,
+    star:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '\2726';
+        font-size: 9px;
+    }
+
+    .star:before {
+        color: transparent;
+        text-shadow: 0 0 3px rgb(250, 250, 199);
+    }
+
+    .star:after {
+        background: yellow;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
