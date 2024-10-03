@@ -17,8 +17,6 @@ Characters ->
 - ancestry
 - wand information (wood, core, length)
 
-
-
 Spells ->
 - name
 - picture

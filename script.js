@@ -14,6 +14,8 @@ const wandWood = document.querySelector(`#wand-wood`)
 const wandCore = document.querySelector(`#wand-core`)
 const wandLength = document.querySelector(`#wand-length`)
 const wizInfo = document.querySelector(`#wizard-info`)
+const notFound = document.querySelector(`#not-found`)
+const notFoundImg = document.querySelector(`#not-found-img`)
 
 function clearSearch() {
     textInputWiz.value = "";
@@ -37,6 +39,7 @@ async function searchWizard() {
 
     wizInfo.style.display = `grid`
     spInfo.style.display = `none`
+    notFound.style.display = `none`
 
     let wizardName = response.data.name
     wizName.textContent = `${wizardName}`
@@ -89,7 +92,15 @@ async function searchWizard() {
 
     return;
    }
-   catch (err) {console.log(`Wizard not found`)}
+   catch (err) {
+    console.log(`Wizard not found`)
+
+    wizInfo.style.display = `none`
+    spInfo.style.display = `none`
+    notFound.style.display = `grid`
+
+    notFoundImg.setAttribute('src', `https://www.wizardingworld.com/assets/_next/static/images/sorting-hat-768-c1739973b4e53269f48e0e4390a48a05.png`)
+}
 
 }
 
@@ -224,7 +235,14 @@ async function searchSpellPotion() {
 
         return;
     }
-    catch (err) { console.error(`potion not found`) }
+    catch (err) { console.error(`potion not found`) 
+
+        wizInfo.style.display = `none`
+        spInfo.style.display = `none`
+        notFound.style.display = `grid`
+    
+        notFoundImg.setAttribute('src', `https://www.wizardingworld.com/assets/_next/static/images/sorting-hat-768-c1739973b4e53269f48e0e4390a48a05.png`)
+    }
 
 }
 
