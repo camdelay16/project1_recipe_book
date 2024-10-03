@@ -13,10 +13,15 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 200px, repeat(2, 1fr);
+        text-shadow: 1px 1px 2px rgb(0, 0, 0);
     }
 
     li {
         margin: 5px;
+    }
+
+    #wiki-potion, #wiki-spell {
+        text-shadow: none;
     }
 
     header {
@@ -36,7 +41,7 @@
         font-style: normal;
         font-size: 45px;
         color: goldenrod;
-        text-shadow: 1px 1px 2px rgb(106, 83, 26);
+        text-shadow: 2px 2px 2px rgb(106, 83, 26);
         margin: 10px;
         text-align: center;
     }
@@ -114,6 +119,7 @@
         justify-items: center;
         align-items: center;
         font-size: 50px;
+        text-align: center;
     }
 
     #not-found-img {
@@ -158,6 +164,7 @@
         font-size: 50px;
         text-decoration: underline;
         letter-spacing: .2rem;
+
 
     }
 
@@ -319,6 +326,11 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 200px, 1fr;
+        text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    }
+
+    #wiki-potion, #wiki-spell {
+        text-shadow: none;
     }
 
     li {
@@ -337,7 +349,7 @@
         font-style: normal;
         font-size: 45px;
         color: goldenrod;
-        text-shadow: 1px 1px 2px rgb(106, 83, 26);
+        text-shadow: 2px 2px 2px rgb(104, 84, 30);
         margin: 10px;
         text-align: center;
     }
