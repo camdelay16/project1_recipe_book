@@ -47,7 +47,13 @@ async function searchWizard() {
     let wizardImg = response.data.image
     wizImg.setAttribute('src', wizardImg)
 
-    if (wizardHouse == `Gryffindor`) { wizHouseImg.setAttribute('src', `https://1000logos.net/wp-content/uploads/2021/11/Gryffindor-Logo-768x432.png`) } else if (wizardHouse == `Slytherin`) { wizHouseImg.setAttribute('src', `https://1000logos.net/wp-content/uploads/2023/05/Slytherin-Logo-768x432.png`) } else if (wizardHouse == `Ravenclaw`) { wizHouseImg.setAttribute('src', `https://logos-world.net/wp-content/uploads/2022/11/Ravenclaw-Symbol-500x281.png`) } else if (wizardHouse == `Hufflepuff`) { wizHouseImg.setAttribute('src', `https://www.seekpng.com/png/full/146-1467974_hufflepuff-house.png`) } else { 'null' }
+    let houseImg = {
+        Gryffindor: `https://1000logos.net/wp-content/uploads/2021/11/Gryffindor-Logo-768x432.png`,
+        Slytherin: `https://1000logos.net/wp-content/uploads/2023/05/Slytherin-Logo-768x432.png`,
+        Ravenclaw: `https://logos-world.net/wp-content/uploads/2022/11/Ravenclaw-Symbol-500x281.png`,
+        Hufflepuff: `https://www.seekpng.com/png/full/146-1467974_hufflepuff-house.png`,
+    }
+    wizHouseImg.setAttribute('src', houseImg[wizardHouse] || `None`)
 
     let wizardAlias = response.data.alternate_names[0]
     wizAlias.textContent = `Alias: ${wizardAlias || `None`}`
