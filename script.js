@@ -151,6 +151,7 @@ async function searchSpellPotion() {
         sAttributes.style.display = `grid`
         pAttributes.style.display = `None`
         wizInfo.style.display = `None`
+        notFound.style.display = `none`
 
         spImgLogo.setAttribute('src', `https://pngimg.com/uploads/wand/wand_PNG25.png`)
 
@@ -200,6 +201,7 @@ async function searchSpellPotion() {
         pAttributes.style.display = `grid`
         sAttributes.style.display = `none`
         wizInfo.style.display = `none`
+        notFound.style.display = `none`
 
         let potionImg = responsePotion.data.data.attributes.image
         spImg.setAttribute(`src`, potionImg)
