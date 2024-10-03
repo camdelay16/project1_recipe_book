@@ -1,208 +1,10 @@
-@media screen and (max-width: 450px) {
-    body {
-        background-image: url('https://w0.peakpx.com/wallpaper/284/109/HD-wallpaper-harry-potter-houses-harry-potter-hogwarts.jpg');
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-attachment: fixed;
-        background-color: rgb(13, 13, 250);
-        color: rgb(231, 196, 105);
-        font-family: "Smythe", system-ui;
-        font-weight: 400;
-        font-style: normal;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 200px, 1fr;
-    }
-
-    li {
-        margin: 5px;
-    }
-
-    header {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-        justify-items: center;
-
-    }
-    #title {
-        font-family: "Risque", serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 45px;
-        color: goldenrod;
-        text-shadow: 1px 1px 2px rgb(106, 83, 26);
-        margin: 10px;
-        text-align: center;
-    }
-
-    button {
-        border: 5px;
-        border-radius: 40px;
-        text-decoration: underline;
-        text-underline-offset: 3px;
-        min-width: 125px;
-    }
-
-    #search-btn-wizard {
-        background-color: crimson;
-        color: gold;
-    }
-
-    #search-btn-wizard:active {
-        background-color: darkgreen;
-        color: silver;
-        font-size: 15px;
-        text-shadow: rgb(236, 231, 212) 1px 0 10px;
-        transform: scale(1:1);
-    }
-
-    #search-btn-spell-potion {
-        background-color: rgb(237, 223, 26);
-        color: black;
-    }
-
-    #search-btn-spell-potion:active {
-        background-color: darkblue;
-        color: silver;
-        font-size: 15px;
-        text-shadow: rgb(236, 231, 212) 1px 0 10px;
-        transform: scale(1:1);
-    }
-
-    #search-bar-spell-potion,
-    #search-bar-wizard,
-    #search-btn-wizard,
-    #search-btn-spell-potion {
-        padding: 5px;
-        font-family: "Smythe", system-ui;
-        font-weight: 400;
-        font-style: normal;
-        letter-spacing: .05rem;
-    }
-
-    #search-bar-spell-potion,
-    #search-bar-wizard {
-        min-width: 250px;
-    }
-
-    #wizard-info {
-        background-color: rgba(128, 128, 128, 0.821);
-        border-radius: 14px;
-        margin: 20px;
-        padding: 20px;
-        letter-spacing: .1rem;
-        display: grid;
-        justify-items: center;
-        align-items: center;
-    }
-
-    #wizard-img-box {
-        margin: 10px;
-    }
-
-    #wizard-name-title {
-        margin-bottom: 20px;
-        margin-left: 20px;
-    }
-
-    #wizard-name {
-        margin: 4px;
-        text-align: center;
-        font-size: 50px;
-        text-decoration: underline;
-        letter-spacing: .2rem;
-
-    }
-
-    #wizard-house {
-        margin: 4px;
-        text-align: center;
-        font-size: 30px;
-    }
-
-    #whi {
-        display: grid;
-        justify-items: center;
-    }
-
-    #wizard-house-img {
-        max-width: 200px;
-        max-height: 200px;
-
-    }
-
-    #wizard-attributes {
-        font-size: 20px;
-        text-transform: capitalize;
-    }
-
-    #wand-info-list {
-        list-style-type: square;
-    }
-
-    #wizard-img,
-    #sp-img {
-        border-radius: 10px;
-    }
-
-    #wizard-img {
-        max-width: 200px;
-        gap: 10px;
-    }
-
-
-    #sp-info {
-        background-color: rgba(128, 128, 128, 0.821);
-        border-radius: 14px;
-        margin: 20px;
-        padding: 20px;
-        letter-spacing: .1rem;
-        display: grid;
-        justify-items: center;
-        align-items: center;
-    }
-
-    #sp-img-box {
-        margin: 10px;
-    }
-
-    #sp-name-img {}
-
-    #sp-logo-div {
-        display: grid;
-        justify-items: center;
-        align-items: center;
-    }
-
-    #sp-logo {
-        max-width: 75px;
-        max-height: 75px;
-    }
-
-    #sp-name {
-        text-align: center;
-        font-size: 40px;
-        text-decoration: underline;
-    }
-
-    #spell-attributes,
-    #potion-attributes {
-        font-size: 20px;
-        text-transform: capitalize;
-    }
-
-    ul {
-        list-style-type: none;
-    }
-
-}
-
 @media screen and (min-width: 450px) {
     body {
         background-image: url('https://wordsandlyricss.wordpress.com/wp-content/uploads/2015/09/harry-potter-14.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
         background-color: rgb(0, 0, 19);
         color: rgb(231, 196, 105);
         font-family: "Smythe", system-ui;
@@ -486,3 +288,205 @@
         -webkit-text-fill-color: transparent;
     }
 }
+
+@media screen and (max-width: 450px) {
+    body {
+        background-image: url('https://w0.peakpx.com/wallpaper/284/109/HD-wallpaper-harry-potter-houses-harry-potter-hogwarts.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-color: rgb(1, 1, 18);
+        color: rgb(231, 196, 105);
+        font-family: "Smythe", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px, 1fr;
+    }
+
+    li {
+        margin: 5px;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        justify-items: center;
+
+    }
+    #title {
+        font-family: "Risque", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 45px;
+        color: goldenrod;
+        text-shadow: 1px 1px 2px rgb(106, 83, 26);
+        margin: 10px;
+        text-align: center;
+    }
+
+    button {
+        border: 5px;
+        border-radius: 40px;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        min-width: 125px;
+    }
+
+    #search-btn-wizard {
+        background-color: crimson;
+        color: gold;
+    }
+
+    #search-btn-wizard:active {
+        background-color: darkgreen;
+        color: silver;
+        font-size: 15px;
+        text-shadow: rgb(236, 231, 212) 1px 0 10px;
+        transform: scale(1:1);
+    }
+
+    #search-btn-spell-potion {
+        background-color: rgb(237, 223, 26);
+        color: black;
+    }
+
+    #search-btn-spell-potion:active {
+        background-color: darkblue;
+        color: silver;
+        font-size: 15px;
+        text-shadow: rgb(236, 231, 212) 1px 0 10px;
+        transform: scale(1:1);
+    }
+
+    #search-bar-spell-potion,
+    #search-bar-wizard,
+    #search-btn-wizard,
+    #search-btn-spell-potion {
+        padding: 5px;
+        font-family: "Smythe", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: .05rem;
+    }
+
+    #search-bar-spell-potion,
+    #search-bar-wizard {
+        min-width: 250px;
+    }
+
+    #wizard-info {
+        background-color: rgba(128, 128, 128, 0.821);
+        border-radius: 14px;
+        margin: 20px;
+        padding: 20px;
+        letter-spacing: .1rem;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
+
+    #wizard-img-box {
+        margin: 10px;
+    }
+
+    #wizard-name-title {
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+    #wizard-name {
+        margin: 4px;
+        text-align: center;
+        font-size: 50px;
+        text-decoration: underline;
+        letter-spacing: .2rem;
+
+    }
+
+    #wizard-house {
+        margin: 4px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    #whi {
+        display: grid;
+        justify-items: center;
+    }
+
+    #wizard-house-img {
+        max-width: 200px;
+        max-height: 200px;
+
+    }
+
+    #wizard-attributes {
+        font-size: 20px;
+        text-transform: capitalize;
+    }
+
+    #wand-info-list {
+        list-style-type: square;
+    }
+
+    #wizard-img,
+    #sp-img {
+        border-radius: 10px;
+    }
+
+    #wizard-img {
+        max-width: 200px;
+        gap: 10px;
+    }
+
+
+    #sp-info {
+        background-color: rgba(128, 128, 128, 0.821);
+        border-radius: 14px;
+        margin: 20px;
+        padding: 20px;
+        letter-spacing: .1rem;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
+
+    #sp-img-box {
+        margin: 10px;
+    }
+
+    #sp-name-img {}
+
+    #sp-logo-div {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
+
+    #sp-logo {
+        max-width: 75px;
+        max-height: 75px;
+    }
+
+    #sp-name {
+        text-align: center;
+        font-size: 40px;
+        text-decoration: underline;
+    }
+
+    #spell-attributes,
+    #potion-attributes {
+        font-size: 20px;
+        text-transform: capitalize;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+}
+
