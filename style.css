@@ -391,6 +391,24 @@
         min-width: 250px;
     }
 
+    #not-found {
+        margin: 20px;
+        gap: 20px;
+        background-color: rgba(128, 128, 128, 0.821);
+        border-radius: 14px;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        font-size: 35px;
+        padding: 10px;
+    }
+
+    #not-found-img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+
     #wizard-info {
         background-color: rgba(128, 128, 128, 0.821);
         border-radius: 14px;
