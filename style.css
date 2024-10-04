@@ -219,6 +219,7 @@
     #wizard-img {
         max-width: 200px;
         gap: 10px;
+        box-shadow: 10px 5px 5px rgb(6, 5, 5);
     }
 
 
@@ -280,6 +281,11 @@
         align-items: center;
         font-size: 20px;
         text-transform: capitalize;
+    }
+
+    img:hover {
+        transform: scale(1.1);
+        transition: all .4s ease-in-out;
     }
 
     ul {
@@ -375,7 +381,7 @@
         color: silver;
         font-size: 15px;
         text-shadow: rgb(236, 231, 212) 1px 0 10px;
-        transform: scale(1:1);
+        transform: scale(1.1);
     }
 
     #search-btn-spell-potion {
@@ -388,7 +394,7 @@
         color: silver;
         font-size: 15px;
         text-shadow: rgb(236, 231, 212) 1px 0 10px;
-        transform: scale(1:1);
+        transform: scale(1.1);
     }
 
     #search-bar-spell-potion,
